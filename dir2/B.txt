@@ -1,0 +1,1 @@
+Contenido del fichero B.txt, pero distinto al de otro fichero B.txt que se puede encontrar en el ejemplo.

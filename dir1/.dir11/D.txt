@@ -1,0 +1,96 @@
+Solución a los ejercicios (recuérdese que $ o > representa un prompt simplificado y que debe usarse el separador de directorios / o \ de acuerdo con el CLI empleado):
+
+1.- Tras la ejecución de los comandos anteriores, ¿cuál es el directorio actual o
+directorio de trabajo?
+
+     GITGITHUB
+
+
+2.- Comando para ir a directorio dir2, es decir, nuevo directorio actual o de trabajo, dir2
+
+    $ cd EjemploDirectorios/dir2
+
+    (O bien > cd EjemploDirectorios\dir2 en CMD)
+
+    A partir de ahora, solo se usara el separador de directorios de tipo UNIX /
+
+
+3.- Listar contenido de directorio \texttt{dir2}
+
+    $ ls 
+
+    o bien
+
+    $ ls .
+
+    o bien 
+
+    $ ls ./
+
+    cuyo resultado debe ser B.txt
+
+
+4.- Listar contenido de directorio (oculto) .dir11 desde el directorio actual o de trabajo (supuestamente dir2)
+
+    $ ls ../dir1/.dir11
+
+    cuyo resultado debe ser: C.txt D.txt
+
+
+5.- Cambiar a directorio de trabajo GITGITHUB de manera absoluta
+
+    $ cd ~/Desktop/GITGITHUB
+
+    O bien
+
+    $ cd c/Users/<USUARIO>/Desktop/GITGITHUB
+
+    O bien...
+
+
+6.- Listar el contenido del directorio de trabajo
+
+    $ ls
+
+    o ls . o ls ./
+
+    Resultado: EjemploDirectorios
+
+
+7.- Imprimir en pantalla el fichero C.txt    
+
+    $ cat EjemploDirectorios/dir1/.dir11/C.txt
+
+    (type en CMD en vez de cat) cuyo resultado debería ser: Contenido del fichero C.txt...
+
+
+8.- Cambiar a directorio de trabajo .dir11    
+
+    $ cd EjemploDirectorios/dir1/.dir11
+
+
+9.- Imprimir en pantalla el fichero \texttt{B.txt}: ambigüedad $\Rightarrow$ imprimir ambos
+
+    En un primer caso (B.txt hijo de dir1):
+
+    $ cat ../B.txt
+
+    Cuyo resultado será: ...Y este, el contenido del fichero B.txt
+
+    Y en el segundo (B.txt hijo de dir2)
+
+    $ cat ../../dir2/B.txt
+
+    Cuyo resultado será: Contenido del fichero B.txt, pero distinto al de otro fichero B.txt que se puede encontrar en el ejemplo.
+
+
+10.- Cambiar a directorio de trabajo \texttt{dir2}    
+
+    $ cd ../../dir2
+
+
+11.- Imprimir en pantalla el fichero \texttt{D.txt}
+
+    $ cat ../dir1/.dir11/D.txt
+
+    Cuyo resultado será: ¡¡¡el actual fichero!!!
